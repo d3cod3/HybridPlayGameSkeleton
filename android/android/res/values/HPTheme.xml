@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="HPTheme" parent="@android:style/Theme.Holo.Light.DarkActionBar">
+        <item name="android:activatedBackgroundIndicator">@drawable/menuitem_background</item>
+        <item name="android:actionBarTabStyle">@style/WidgetTabStyle.HybridPlay</item>
+        <item name="seekArcStyle">@style/SeekArcLight</item>
+    </style>
+    
+    <style name="WidgetTabStyle.HybridPlay" parent="@android:style/Widget.Holo.ActionBar.TabView">
+        <item name="android:background">@drawable/tab_indicator_ab_hp</item>
+    </style>
+</resources>

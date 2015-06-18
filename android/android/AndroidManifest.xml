@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+  The MIT License (MIT)
+  
+  Copyright (c) 2015 Lalalab Projects S. L.
+  Author Emanuele Mazza
+  
+  Permission is hereby granted, free of charge, to any person obtaining a copy of
+  this software and associated documentation files (the "Software"), to deal in
+  the Software without restriction, including without limitation the rights to
+  use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of
+  the Software, and to permit persons to whom the Software is furnished to do so,
+  subject to the following conditions:
+  
+  The above copyright notice and this permission notice shall be included in all
+  copies or substantial portions of the Software.
+  
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS
+  FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR
+  COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER
+  IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN
+  CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+-->
+
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.hybridplay.game.android"
+    android:installLocation="auto"
+    android:versionCode="1"
+    android:versionName="1.0" >
+    
+    <!-- ////////////////////////////////// SDK -->
+
+	<!-- 18 for BT LE (4.0) -->
+    <uses-sdk 
+        android:minSdkVersion="18"
+        android:targetSdkVersion="22" />
+    
+    <!-- ////////////////////////////////// PERMISSIONS -->
+    
+    <!-- Phone -->
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.VIBRATE"/>
+    <!-- Internal Memory / External SD Card Permissions -->
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_LOCAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_LOCAL_STORAGE" />
+    <!-- Internet -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <!-- WIFI -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE"/>
+    <!-- BLUETOOTH -->
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+	<uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+	
+	<!-- ////////////////////////////////// FEAUTURES -->
+	
+	<uses-feature android:name="android.hardware.bluetooth_le"  android:required="true" />
+
+    
+    <application
+        android:name=".HP_Application"
+        android:allowBackup="true"
+        android:supportsRtl="false"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@android:style/Theme.NoTitleBar.Fullscreen">
+        
+        <!-- ////////////////////////////////// APPLICATION ACTIVITIES -->
+        
+        <!-- SPLASHSCREEN (APP ENTER ACTIVITY)  -->
+        <activity
+            android:name=".HP_SplashScreen"
+            android:label="@string/app_name">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        
+        <!-- LIBGDX MAIN GAME ACTIVITY -->
+        <activity 
+            android:name="com.hybridplay.game.android.GameLauncher" 
+            android:theme="@style/GdxTheme" 
+            android:screenOrientation="landscape" 
+            android:configChanges="keyboard|keyboardHidden|orientation|screenSize">
+        </activity>
+        
+        <!-- WIFI -->
+        <activity android:name=".HP_Connect" android:theme="@style/HPTheme" android:screenOrientation="portrait"></activity>
+        <!-- Instructions -->
+        <activity android:name=".HP_Instructions" android:theme="@style/HPTheme"></activity>
+        <!-- Credits -->
+        <activity android:name=".HP_Credits" android:theme="@style/HPTheme"></activity>
+        
+        <!-- ////////////////////////////////// APPLICATION SERVICES -->
+        
+        <service android:name="com.hybridplay.bluetoothle.BluetoothLeService" android:enabled="true"/>
+        
+    </application>
+
+</manifest>

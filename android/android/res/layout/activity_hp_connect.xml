@@ -1,0 +1,458 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    tools:context=".HP_Connect" >
+
+    <TabHost
+        android:id="@android:id/tabhost"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical" >
+
+            <TabWidget
+                android:id="@android:id/tabs"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <FrameLayout
+                android:id="@android:id/tabcontent"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" >
+
+                <LinearLayout
+                    android:id="@+id/tab1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical" >
+
+                    <com.hybridplay.widgets.RobotoTextView
+                        xmlns:android="http://schemas.android.com/apk/res/android"
+                        xmlns:hybrid="http://schemas.android.com/apk/res-auto"
+                        android:id="@+id/connectionText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="20dp"
+                        android:text="@string/sensor_disconnected"
+                        android:textColor="@color/hp_red"
+                        android:textSize="16sp"
+                        hybrid:typeface="roboto_bold" />
+
+                    <ImageView
+                        android:id="@+id/connectionImage"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical|center_horizontal"
+                        android:layout_marginTop="20dp"
+                        android:contentDescription="@string/content_image"
+                        android:src="@drawable/connecting" />
+
+                    <RelativeLayout
+                        android:id="@+id/signalLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:visibility="gone" >
+
+                        <com.philjay.valuebar.ValueBar
+                            android:id="@+id/wifiStrength"
+                            android:layout_width="match_parent"
+                            android:layout_height="60dp"
+                            android:layout_margin="20dp" />
+
+                        <com.hybridplay.widgets.RobotoTextView
+                            xmlns:android="http://schemas.android.com/apk/res/android"
+                            xmlns:hybrid="http://schemas.android.com/apk/res-auto"
+                            android:id="@+id/textView2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_centerVertical="true"
+                            android:text="@string/sensor_signal_strength"
+                            android:textColor="@color/absolute_white"
+                            android:textSize="16sp"
+                            hybrid:typeface="roboto_bold" />
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:id="@+id/wifiDataLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="20dp"
+                        android:orientation="vertical"
+                        android:visibility="gone" >
+
+                        <com.hybridplay.widgets.RobotoTextView
+                            xmlns:android="http://schemas.android.com/apk/res/android"
+                            xmlns:hybrid="http://schemas.android.com/apk/res-auto"
+                            android:id="@+id/wifiSSID"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:text="@string/sensor_SSID"
+                            android:textColor="@color/hp_blue"
+                            android:textSize="20sp"
+                            hybrid:typeface="roboto_bold" />
+
+                        <com.hybridplay.widgets.RobotoTextView
+                            xmlns:android="http://schemas.android.com/apk/res/android"
+                            xmlns:hybrid="http://schemas.android.com/apk/res-auto"
+                            android:id="@+id/wifiBSSID"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:text="@string/sensor_BSSID"
+                            android:textColor="@color/hp_yellow"
+                            android:textSize="12sp"
+                            hybrid:typeface="roboto_medium_italic" />
+
+                        <com.hybridplay.widgets.RobotoTextView
+                            xmlns:android="http://schemas.android.com/apk/res/android"
+                            xmlns:hybrid="http://schemas.android.com/apk/res-auto"
+                            android:id="@+id/ipAssigned"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:text="@string/sensor_ip"
+                            android:textColor="@color/middle_gray"
+                            android:textSize="16sp"
+                            hybrid:typeface="roboto_black" />
+                    </LinearLayout>
+
+                    <Button
+                        android:id="@+id/connectButton"
+                        style="@style/hp_button_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom|center_horizontal"
+                        android:layout_margin="20dp"
+                        android:background="@drawable/blue_button"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:text="@string/sensor_connect"
+                        android:visibility="visible" />
+
+                    <Button
+                        android:id="@+id/refreshButton"
+                        style="@style/hp_button_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom|center_horizontal"
+                        android:layout_margin="20dp"
+                        android:background="@drawable/blue_button"
+                        android:text="@string/sensor_refresh"
+                        android:visibility="gone" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/tab2"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical" >
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="300dp"
+                        android:baselineAligned="false"
+                        android:orientation="horizontal"
+                        android:padding="20dp" >
+
+                        <FrameLayout
+                            android:id="@+id/sensorXContainer"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1" >
+
+                            <TextView
+                                android:id="@+id/sensorXLabel"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_horizontal"
+                                android:text="@string/sensorXAngle"
+                                android:textColor="@color/hp_red"
+                                android:textSize="24sp" />
+
+                            <ImageView
+                                android:id="@+id/triggerXL"
+                                android:layout_width="10dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="top|start"
+                                android:layout_marginEnd="20dp"
+                                android:layout_marginLeft="20dp"
+                                android:layout_marginRight="20dp"
+                                android:layout_marginStart="20dp"
+                                android:contentDescription="@string/content_image"
+                                android:src="@drawable/izquierda_off" />
+
+                            <ImageView
+                                android:id="@+id/triggerXR"
+                                android:layout_width="10dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="top|end"
+                                android:layout_marginEnd="20dp"
+                                android:layout_marginLeft="20dp"
+                                android:layout_marginRight="20dp"
+                                android:layout_marginStart="20dp"
+                                android:contentDescription="@string/content_image"
+                                android:src="@drawable/derecha_off" />
+
+                            <com.triggertrap.seekarc.SeekArc
+                                xmlns:seekarc="http://schemas.android.com/apk/res/com.hybridplay.game.android"
+                                android:id="@+id/sensorX"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:clickable="false"
+                                android:longClickable="false"
+                                android:padding="30dp"
+                                seekarc:arcColor="@color/hp_red"
+                                seekarc:clockwise="true"
+                                seekarc:max="360"
+                                seekarc:progressColor="@color/hp_red"
+                                seekarc:rotation="0"
+                                seekarc:startAngle="0"
+                                seekarc:sweepAngle="360"
+                                seekarc:thumb="@drawable/custom_seek_arc_control_selector"
+                                seekarc:touchInside="false" />
+
+                            <TextView
+                                android:id="@+id/sensorXReadings"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:gravity="center_horizontal"
+                                android:text="@string/no_data"
+                                android:textColor="@color/middle_gray"
+                                android:textSize="16sp" />
+                        </FrameLayout>
+
+                        <FrameLayout
+                            android:id="@+id/sensorYContainer"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1" >
+
+                            <TextView
+                                android:id="@+id/sensorYLabel"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_horizontal"
+                                android:text="@string/sensorYAngle"
+                                android:textColor="@color/hp_blue"
+                                android:textSize="24sp" />
+
+                            <ImageView
+                                android:id="@+id/triggerYL"
+                                android:layout_width="10dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="top|start"
+                                android:layout_marginEnd="20dp"
+                                android:layout_marginLeft="20dp"
+                                android:layout_marginRight="20dp"
+                                android:layout_marginStart="20dp"
+                                android:contentDescription="@string/content_image"
+                                android:src="@drawable/izquierda_off"
+                                android:tint="@color/hp_blue" />
+
+                            <ImageView
+                                android:id="@+id/triggerYR"
+                                android:layout_width="10dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="top|end"
+                                android:layout_marginEnd="20dp"
+                                android:layout_marginLeft="20dp"
+                                android:layout_marginRight="20dp"
+                                android:layout_marginStart="20dp"
+                                android:contentDescription="@string/content_image"
+                                android:src="@drawable/derecha_off"
+                                android:tint="@color/hp_blue" />
+
+                            <com.triggertrap.seekarc.SeekArc
+                                xmlns:seekarc="http://schemas.android.com/apk/res/com.hybridplay.game.android"
+                                android:id="@+id/sensorY"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:clickable="false"
+                                android:longClickable="false"
+                                android:padding="30dp"
+                                seekarc:arcColor="@color/hp_blue"
+                                seekarc:clockwise="true"
+                                seekarc:max="360"
+                                seekarc:progressColor="@color/hp_blue"
+                                seekarc:rotation="0"
+                                seekarc:startAngle="0"
+                                seekarc:sweepAngle="360"
+                                seekarc:thumb="@drawable/custom_seek_arc_control_selector"
+                                seekarc:touchInside="false" />
+
+                            <TextView
+                                android:id="@+id/sensorYReadings"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:gravity="center_horizontal"
+                                android:text="@string/no_data"
+                                android:textColor="@color/middle_gray"
+                                android:textSize="16sp" />
+                        </FrameLayout>
+
+                        <FrameLayout
+                            android:id="@+id/sensorZContainer"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1" >
+
+                            <TextView
+                                android:id="@+id/sensorZLabel"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_horizontal"
+                                android:text="@string/sensorZAngle"
+                                android:textColor="@color/hp_green"
+                                android:textSize="24sp" />
+
+                            <ImageView
+                                android:id="@+id/triggerZL"
+                                android:layout_width="10dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="top|start"
+                                android:layout_marginEnd="20dp"
+                                android:layout_marginLeft="20dp"
+                                android:layout_marginRight="20dp"
+                                android:layout_marginStart="20dp"
+                                android:contentDescription="@string/content_image"
+                                android:src="@drawable/izquierda_off"
+                                android:tint="@color/hp_green" />
+
+                            <ImageView
+                                android:id="@+id/triggerZR"
+                                android:layout_width="10dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="top|end"
+                                android:layout_marginEnd="20dp"
+                                android:layout_marginLeft="20dp"
+                                android:layout_marginRight="20dp"
+                                android:layout_marginStart="20dp"
+                                android:contentDescription="@string/content_image"
+                                android:src="@drawable/derecha_off"
+                                android:tint="@color/hp_green" />
+
+                            <com.triggertrap.seekarc.SeekArc
+                                xmlns:seekarc="http://schemas.android.com/apk/res/com.hybridplay.game.android"
+                                android:id="@+id/sensorZ"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:clickable="false"
+                                android:longClickable="false"
+                                android:padding="30dp"
+                                seekarc:arcColor="@color/hp_green"
+                                seekarc:clockwise="true"
+                                seekarc:max="360"
+                                seekarc:progressColor="@color/hp_green"
+                                seekarc:rotation="0"
+                                seekarc:startAngle="0"
+                                seekarc:sweepAngle="360"
+                                seekarc:thumb="@drawable/custom_seek_arc_control_selector"
+                                seekarc:touchInside="false" />
+
+                            <TextView
+                                android:id="@+id/sensorZReadings"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:gravity="center_horizontal"
+                                android:text="@string/no_data"
+                                android:textColor="@color/middle_gray"
+                                android:textSize="16sp" />
+                        </FrameLayout>
+                    </LinearLayout>
+
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="80dp" >
+
+                        <TextView
+                            android:id="@+id/sensorIRLabel"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="top|center_horizontal"
+                            android:text="@string/sensorIRDistance"
+                            android:textColor="@color/hp_orange"
+                            android:textSize="24sp" />
+
+                        <SeekBar
+                            android:id="@+id/sensorIR"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:clickable="false"
+                            android:focusable="false"
+                            android:longClickable="false"
+                            android:max="100"
+                            android:paddingBottom="10dp"
+                            android:paddingLeft="20dp"
+                            android:paddingRight="20dp"
+                            android:paddingTop="40dp"
+                            android:progressDrawable="@drawable/hp_scrubber_progress"
+                            android:thumb="@drawable/custom_seek_arc_control_selector" />
+
+                        <TextView
+                            android:id="@+id/sensorIRReadings"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical|center_horizontal"
+                            android:layout_marginTop="10dp"
+                            android:gravity="center_horizontal"
+                            android:text="@string/no_data"
+                            android:textColor="@color/middle_gray" />
+                    </FrameLayout>
+
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" >
+
+                        <Button
+                            android:id="@+id/sensorPositionButton"
+                            style="@style/hp_button_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="bottom|center_horizontal"
+                            android:layout_margin="20dp"
+                            android:background="@drawable/blue_button"
+                            android:paddingLeft="10dp"
+                            android:paddingRight="10dp"
+                            android:text="@string/sensor_position"
+                            android:textSize="20sp"
+                            android:visibility="visible" />
+                    </FrameLayout>
+
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" >
+
+                        <Button
+                            android:id="@+id/autoCalibrateButton"
+                            style="@style/hp_button_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="bottom|center_horizontal"
+                            android:layout_margin="20dp"
+                            android:background="@drawable/blue_button"
+                            android:paddingLeft="10dp"
+                            android:paddingRight="10dp"
+                            android:text="@string/sensor_calibrate"
+                            android:textSize="20sp"
+                            android:visibility="visible" />
+                    </FrameLayout>
+                </LinearLayout>
+            </FrameLayout>
+        </LinearLayout>
+    </TabHost>
+
+</RelativeLayout>

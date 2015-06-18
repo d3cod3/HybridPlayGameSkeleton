@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/tab_indicator"
+    android:orientation="vertical" >
+
+    <com.hybridplay.widgets.RobotoTextView 
+    	xmlns:android="http://schemas.android.com/apk/res/android"
+    	xmlns:hybrid="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical|center_horizontal"
+        hybrid:typeface="roboto_bold"
+    	android:textSize="14sp"
+        android:textColor="@color/absolute_white" />
+
+</LinearLayout>

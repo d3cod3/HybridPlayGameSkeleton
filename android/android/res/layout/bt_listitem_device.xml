@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".HP_Connect$LeDeviceListAdapter" >
+    
+    <com.hybridplay.widgets.RobotoTextView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:hybrid="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/device_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="6dp"
+        android:text="@string/bt_device_name"
+        android:textColor="@color/hp_blue"
+        android:textSize="22sp"
+        hybrid:typeface="roboto_bold" />
+    
+    <com.hybridplay.widgets.RobotoTextView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:hybrid="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/device_address"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="4dp"
+        android:text="@string/bt_device_address"
+        android:textColor="@color/hp_yellow"
+        android:textSize="16sp"
+        hybrid:typeface="roboto_bold" />
+
+</LinearLayout>
