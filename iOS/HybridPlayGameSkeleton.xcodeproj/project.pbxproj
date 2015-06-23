@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		200B8E4A1B397BC300572BEC /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 200B8E491B397BC300572BEC /* libsqlite3.dylib */; };
+		200B8E4C1B397E6900572BEC /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 200B8E4B1B397E6900572BEC /* MediaPlayer.framework */; };
+		200B8E4E1B397E7800572BEC /* GameController.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 200B8E4D1B397E7800572BEC /* GameController.framework */; };
+		200B8E501B397E9300572BEC /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 200B8E4F1B397E9300572BEC /* CoreTelephony.framework */; };
+		200B8E521B397EA900572BEC /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 200B8E511B397EA900572BEC /* MessageUI.framework */; };
+		200B8E541B397EB800572BEC /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 200B8E531B397EB800572BEC /* StoreKit.framework */; };
+		200B8E561B397EBF00572BEC /* EventKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 200B8E551B397EBF00572BEC /* EventKit.framework */; };
+		200B8E581B397EC700572BEC /* EventKitUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 200B8E571B397EC700572BEC /* EventKitUI.framework */; };
 		200EAE761B0E240000E7C6FF /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 200EAE751B0E240000E7C6FF /* SystemConfiguration.framework */; };
 		200EAE781B0E27B300E7C6FF /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 200EAE771B0E27B300E7C6FF /* CoreLocation.framework */; };
 		201E2ADD1B275291000B43D8 /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 201E2ADC1B275291000B43D8 /* CoreMotion.framework */; };
@@ -14,7 +22,6 @@
 		201E2AE11B2752A9000B43D8 /* OpenAL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 201E2AE01B2752A9000B43D8 /* OpenAL.framework */; };
 		201E2AE31B2752B6000B43D8 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 201E2AE21B2752B6000B43D8 /* AVFoundation.framework */; };
 		201E2AE51B2752BC000B43D8 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 201E2AE41B2752BC000B43D8 /* AudioToolbox.framework */; };
-		201E2AF31B275E8F000B43D8 /* libcocos2d iOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 201E2AF21B275E8F000B43D8 /* libcocos2d iOS.a */; };
 		201E2AF81B276C18000B43D8 /* HelloWorld.png in Resources */ = {isa = PBXBuildFile; fileRef = 201E2AF71B276C18000B43D8 /* HelloWorld.png */; };
 		2045D0D61B036AC600D8D285 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2045D0D41B036AC600D8D285 /* Main.storyboard */; };
 		2045D0DA1B036AFC00D8D285 /* hybrid_launchscreen.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 2045D0D81B036AFC00D8D285 /* hybrid_launchscreen.jpg */; };
@@ -84,6 +91,14 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		200B8E491B397BC300572BEC /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
+		200B8E4B1B397E6900572BEC /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
+		200B8E4D1B397E7800572BEC /* GameController.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameController.framework; path = System/Library/Frameworks/GameController.framework; sourceTree = SDKROOT; };
+		200B8E4F1B397E9300572BEC /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
+		200B8E511B397EA900572BEC /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
+		200B8E531B397EB800572BEC /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		200B8E551B397EBF00572BEC /* EventKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EventKit.framework; path = System/Library/Frameworks/EventKit.framework; sourceTree = SDKROOT; };
+		200B8E571B397EC700572BEC /* EventKitUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EventKitUI.framework; path = System/Library/Frameworks/EventKitUI.framework; sourceTree = SDKROOT; };
 		200EAE751B0E240000E7C6FF /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		200EAE771B0E27B300E7C6FF /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		201E2ADC1B275291000B43D8 /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
@@ -202,7 +217,14 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				201E2AF31B275E8F000B43D8 /* libcocos2d iOS.a in Frameworks */,
+				200B8E581B397EC700572BEC /* EventKitUI.framework in Frameworks */,
+				200B8E561B397EBF00572BEC /* EventKit.framework in Frameworks */,
+				200B8E541B397EB800572BEC /* StoreKit.framework in Frameworks */,
+				200B8E521B397EA900572BEC /* MessageUI.framework in Frameworks */,
+				200B8E501B397E9300572BEC /* CoreTelephony.framework in Frameworks */,
+				200B8E4E1B397E7800572BEC /* GameController.framework in Frameworks */,
+				200B8E4C1B397E6900572BEC /* MediaPlayer.framework in Frameworks */,
+				200B8E4A1B397BC300572BEC /* libsqlite3.dylib in Frameworks */,
 				201E2AE51B2752BC000B43D8 /* AudioToolbox.framework in Frameworks */,
 				201E2AE31B2752B6000B43D8 /* AVFoundation.framework in Frameworks */,
 				201E2AE11B2752A9000B43D8 /* OpenAL.framework in Frameworks */,
@@ -440,6 +462,14 @@
 		B77F1B3017B978D7009739AE /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				200B8E571B397EC700572BEC /* EventKitUI.framework */,
+				200B8E551B397EBF00572BEC /* EventKit.framework */,
+				200B8E531B397EB800572BEC /* StoreKit.framework */,
+				200B8E511B397EA900572BEC /* MessageUI.framework */,
+				200B8E4F1B397E9300572BEC /* CoreTelephony.framework */,
+				200B8E4D1B397E7800572BEC /* GameController.framework */,
+				200B8E4B1B397E6900572BEC /* MediaPlayer.framework */,
+				200B8E491B397BC300572BEC /* libsqlite3.dylib */,
 				201E2AF91B276CC6000B43D8 /* libpng.a */,
 				201E2AF21B275E8F000B43D8 /* libcocos2d iOS.a */,
 				201E2AE41B2752BC000B43D8 /* AudioToolbox.framework */,
@@ -639,7 +669,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD)";
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				CLANG_CXX_LANGUAGE_STANDARD = "c++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_WARN_BOOL_CONVERSION = "$(CLANG_WARN_SUSPICIOUS_IMPLICIT_CONVERSION)";
@@ -667,18 +697,22 @@
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
-					"${SRCROOT}/Source/libs/cocos2dx/cocos",
-					"${SRCROOT}/Source/libs/cocos2dx/cocos/base",
-					"${SRCROOT}/Source/libs/cocos2dx/cocos/physics",
-					"${SRCROOT}/Source/libs/cocos2dx/cocos/math",
-					"${SRCROOT}/Source/libs/cocos2dx/cocos/2d",
-					"${SRCROOT}/Source/libs/cocos2dx/cocos/ui",
-					"${SRCROOT}/Source/libs/cocos2dx/cocos/network",
-					"${SRCROOT}/Source/libs/cocos2dx/cocos/audio/include",
-					"${SRCROOT}/Source/libs/cocos2dx/cocos/editor-support",
-					"${SRCROOT}/Source/libs/cocos2dx/cocos/extensions",
-					"${SRCROOT}/Source/libs/cocos2dx/cocos/external",
-					"${SRCROOT}/Source/libs/cocos2dx/cocos/external/chipmunk/include/chipmunk",
+					"$(SRCROOT)/lib/cocos2d/x/include",
+					"$(SRCROOT)/lib/cocos2d/x/include/cocos",
+					"$(SRCROOT)/lib/cocos2d/x/include/cocos/base",
+					"$(SRCROOT)/lib/cocos2d/x/include/cocos/physics",
+					"$(SRCROOT)/lib/cocos2d/x/include/cocos/math/kazmath",
+					"$(SRCROOT)/lib/cocos2d/x/include/cocos/2d",
+					"$(SRCROOT)/lib/cocos2d/x/include/cocos/gui",
+					"$(SRCROOT)/lib/cocos2d/x/include/cocos/network",
+					"$(SRCROOT)/lib/cocos2d/x/include/cocos/audio/include",
+					"$(SRCROOT)/lib/cocos2d/x/include/cocos/editor-support",
+					"$(SRCROOT)/lib/cocos2d/x/include/extensions",
+					"$(SRCROOT)/lib/cocos2d/x/include/external",
+					"$(SRCROOT)/lib/cocos2d/x/include/external/chipmunk/include/chipmunk",
+					"$(SRCROOT)/lib/cocos2d/x/include/bindings/auto",
+					"$(SRCROOT)/lib/cocos2d/x/include/bindings/manual",
+					"$(SRCROOT)/lib/cocos2d/x/include/bindings/manual/cocosbuilder",
 					$SDKROOT/usr/include/libxml2,
 				);
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
@@ -695,7 +729,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD)";
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				CLANG_CXX_LANGUAGE_STANDARD = "c++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_WARN_BOOL_CONVERSION = "$(CLANG_WARN_SUSPICIOUS_IMPLICIT_CONVERSION)";
@@ -721,18 +755,22 @@
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
-					"${SRCROOT}/Source/libs/cocos2dx/cocos",
-					"${SRCROOT}/Source/libs/cocos2dx/cocos/base",
-					"${SRCROOT}/Source/libs/cocos2dx/cocos/physics",
-					"${SRCROOT}/Source/libs/cocos2dx/cocos/math",
-					"${SRCROOT}/Source/libs/cocos2dx/cocos/2d",
-					"${SRCROOT}/Source/libs/cocos2dx/cocos/ui",
-					"${SRCROOT}/Source/libs/cocos2dx/cocos/network",
-					"${SRCROOT}/Source/libs/cocos2dx/cocos/audio/include",
-					"${SRCROOT}/Source/libs/cocos2dx/cocos/editor-support",
-					"${SRCROOT}/Source/libs/cocos2dx/cocos/extensions",
-					"${SRCROOT}/Source/libs/cocos2dx/cocos/external",
-					"${SRCROOT}/Source/libs/cocos2dx/cocos/external/chipmunk/include/chipmunk",
+					"$(SRCROOT)/lib/cocos2d/x/include",
+					"$(SRCROOT)/lib/cocos2d/x/include/cocos",
+					"$(SRCROOT)/lib/cocos2d/x/include/cocos/base",
+					"$(SRCROOT)/lib/cocos2d/x/include/cocos/physics",
+					"$(SRCROOT)/lib/cocos2d/x/include/cocos/math/kazmath",
+					"$(SRCROOT)/lib/cocos2d/x/include/cocos/2d",
+					"$(SRCROOT)/lib/cocos2d/x/include/cocos/gui",
+					"$(SRCROOT)/lib/cocos2d/x/include/cocos/network",
+					"$(SRCROOT)/lib/cocos2d/x/include/cocos/audio/include",
+					"$(SRCROOT)/lib/cocos2d/x/include/cocos/editor-support",
+					"$(SRCROOT)/lib/cocos2d/x/include/extensions",
+					"$(SRCROOT)/lib/cocos2d/x/include/external",
+					"$(SRCROOT)/lib/cocos2d/x/include/external/chipmunk/include/chipmunk",
+					"$(SRCROOT)/lib/cocos2d/x/include/bindings/auto",
+					"$(SRCROOT)/lib/cocos2d/x/include/bindings/manual",
+					"$(SRCROOT)/lib/cocos2d/x/include/bindings/manual/cocosbuilder",
 					$SDKROOT/usr/include/libxml2,
 				);
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
@@ -749,7 +787,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = YES;
-				ARCHS = "$(ARCHS_STANDARD)";
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = NO;
 				CLANG_CXX_LANGUAGE_STANDARD = "c++0x";
@@ -768,10 +806,12 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = Source/Prefix.pch;
 				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
 					USE_FILE32API,
 					CC_TARGET_OS_IPHONE,
-					"COCOS2D_DEBUG=1",
-					"CC_ENABLE_CHIPMUNK_INTEGRATION=1",
+					"COCOS2D_DEBUG=0",
+					CC_ENABLE_CHIPMUNK_INTEGRATION,
+					COCOS2D_JAVASCRIPT,
 				);
 				GCC_VERSION = "";
 				GCC_WARN_64_TO_32_BIT_CONVERSION = NO;
@@ -779,8 +819,8 @@
 				GENERATE_PKGINFO_FILE = YES;
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
-					"${SRCROOT}/Source/libs/cocos2dx/cocos/platform/ios",
-					"${SRCROOT}/Source/libs/cocos2dx/cocos/platform/ios/Simulation",
+					"$(SRCROOT)/lib/cocos2d/x/include/cocos/platform/ios",
+					"$(SRCROOT)/lib/cocos2d/x/include/external/spidermonkey/include/ios",
 					"\"$(SDK_DIR)\"/usr/include/libxml2",
 				);
 				INFOPLIST_FILE = Source/Resources/Platforms/iOS/Info.plist;
@@ -788,12 +828,16 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(SRCROOT)/Source/libs",
-					"$(PROJECT_DIR)/Source/libs/cocos2dx/external/png/prebuilt/ios",
+					"$(SRCROOT)/lib/cocos2d/x/lib/$(CONFIGURATION)-iOS/$(PLATFORM_NAME)",
 				);
 				ONLY_ACTIVE_ARCH = YES;
 				OTHER_CPLUSPLUSFLAGS = "$(OTHER_CFLAGS)";
-				OTHER_LDFLAGS = "";
+				OTHER_LDFLAGS = (
+					"-lcocos2dx-prebuilt",
+					"-lz",
+					"-lxml2",
+					"-ObjC",
+				);
 				PRODUCT_NAME = HybridPlayGameSkeleton;
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "Source/Bridging-Header.h";
@@ -806,7 +850,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = YES;
-				ARCHS = "$(ARCHS_STANDARD)";
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = NO;
 				CLANG_CXX_LANGUAGE_STANDARD = "c++0x";
@@ -824,9 +868,10 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = Source/Prefix.pch;
 				GCC_PREPROCESSOR_DEFINITIONS = (
+					NDEBUG,
 					USE_FILE32API,
 					CC_TARGET_OS_IPHONE,
-					"CC_ENABLE_CHIPMUNK_INTEGRATION=1",
+					CC_ENABLE_CHIPMUNK_INTEGRATION,
 				);
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				GCC_VERSION = "";
@@ -835,8 +880,8 @@
 				GENERATE_PKGINFO_FILE = YES;
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
-					"${SRCROOT}/Source/libs/cocos2dx/cocos/platform/ios",
-					"${SRCROOT}/Source/libs/cocos2dx/cocos/platform/ios/Simulation",
+					"$(SRCROOT)/lib/cocos2d/x/include/cocos/platform/ios",
+					"$(SRCROOT)/lib/cocos2d/x/include/external/spidermonkey/include/ios",
 					"\"$(SDK_DIR)\"/usr/include/libxml2",
 				);
 				INFOPLIST_FILE = Source/Resources/Platforms/iOS/Info.plist;
@@ -844,12 +889,16 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(SRCROOT)/Source/libs",
-					"$(PROJECT_DIR)/Source/libs/cocos2dx/external/png/prebuilt/ios",
+					"$(SRCROOT)/lib/cocos2d/x/lib/$(CONFIGURATION)-iOS/$(PLATFORM_NAME)",
 				);
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				OTHER_CPLUSPLUSFLAGS = "$(OTHER_CFLAGS)";
-				OTHER_LDFLAGS = "";
+				OTHER_LDFLAGS = (
+					"-lcocos2dx-prebuilt",
+					"-lz",
+					"-lxml2",
+					"-ObjC",
+				);
 				PRODUCT_NAME = HybridPlayGameSkeleton;
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "Source/Bridging-Header.h";
